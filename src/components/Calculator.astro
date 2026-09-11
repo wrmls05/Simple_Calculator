@@ -11,6 +11,7 @@ import "../styles/global.css";
         <form class="bg-gray-600 rounded-xl mb-2">
             <input
                 type="text"
+                id="screen"
                 class="text-black px-3 w-full text-right text-2xl py-13"
             />
         </form>
@@ -93,11 +94,13 @@ import "../styles/global.css";
             >
             <button
                 type="button"
+                data-action="equal"
                 class="bg-green-600 text-black w-15 h-15 rounded-md"
                 data-num="=">=</button
             >
             <button
                 type="button"
+                data-action="clear"
                 class="bg-blue-600 text-white w-15 h-15 rounded-md"
                 data-num="C">C</button
             >
