@@ -1,0 +1,108 @@
+---
+import "../styles/global.css";
+---
+
+<main class="flex flex-col justify-center items-center min-h-screen bg-black">
+    <h1 class="text-3xl text-red-400 font-bold">Simple Calculator</h1>
+
+    <section
+        class="flex flex-col justify-center items-center bg-gray-800 border-white m-5 rounded-xl"
+    >
+        <form class="bg-gray-600 rounded-xl mb-2">
+            <input
+                type="text"
+                class="text-black px-3 w-full text-right text-2xl py-13"
+            />
+        </form>
+
+        <div class="grid grid-cols-4 gap-3 text-3xl pb-8 pt-2">
+            <button
+                type="button"
+                class="bg-orange-400 text-white w-15 h-15 rounded-md flex items-center justify-center"
+                data-num="*">*</button
+            >
+            <button
+                type="button"
+                class="bg-orange-400 text-white w-15 h-15 rounded-md flex items-center justify-center"
+                data-num="/">/</button
+            >
+            <button
+                type="button"
+                class="bg-orange-400 text-white w-15 h-15 rounded-md flex items-center justify-center"
+                data-num="-">-</button
+            >
+            <button
+                type="button"
+                class="bg-orange-400 text-white w-15 h-15 rounded-md flex items-center justify-center"
+                data-num="+">+</button
+            >
+            <button
+                type="button"
+                class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center"
+                data-num="9">9</button
+            >
+            <button
+                type="button"
+                class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center"
+                data-num="8">8</button
+            >
+            <button
+                type="button"
+                class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center"
+                data-num="7">7</button
+            >
+            <button
+                type="button"
+                class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center"
+                data-num="6">6</button
+            >
+            <button
+                type="button"
+                class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center"
+                data-num="5">5</button
+            >
+            <button
+                type="button"
+                class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center"
+                data-num="4">4</button
+            >
+            <button
+                type="button"
+                class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center"
+                data-num="3">3</button
+            >
+            <button
+                type="button"
+                class="bg-white text-black w-15 h-15 rounded-md"
+                data-num="2">2</button
+            >
+            <button
+                type="button"
+                class="bg-white text-black w-15 h-15 rounded-md"
+                data-num="1">1</button
+            >
+            <button
+                type="button"
+                class="bg-white text-black w-15 h-15 rounded-md"
+                data-num="0">0</button
+            >
+            <button
+                type="button"
+                class="bg-white text-black w-15 h-15 rounded-md"
+                data-num=".">.</button
+            >
+            <button
+                type="button"
+                class="bg-green-600 text-black w-15 h-15 rounded-md"
+                data-num="=">=</button
+            >
+            <button
+                type="button"
+                class="bg-blue-600 text-white w-15 h-15 rounded-md"
+                data-num="C">C</button
+            >
+        </div>
+    </section>
+</main>
+
+<script src="../scripts/calculator.js"></script>
