@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import Calculator from "../components/Calculator.astro";
+import Navbar from '../components/Navbar.astro'
 ---
 
 <html lang="en">
@@ -13,6 +13,21 @@ import Calculator from "../components/Calculator.astro";
 		<title>Simple Calculator</title>
 	</head>
 	<body>
-		<Calculator />
+		<Navbar />
+
+		<section class="flex justify-center items-center min-h-screen">
+			<div class="bg-black text-white px-10 py-6 rounded-lg">
+				<div class="flex justify-center items-center">
+					<h1>Login</h1>
+				</div>
+				<form class="flex flex-col gap-2 mt-4">
+					<label >Username</label>
+					<input type="text" class="border border-white rounded-sm" />
+					<label >Password</label>
+					<input type="password" class="border border-white rounded-sm" />
+					<button type="submit" class="border border-white rounded-sm bg-white text-black mt-4">Login</button>
+				</form>
+			</div>
+		</section>
 	</body>
 </html>
