@@ -13,27 +13,27 @@
     buttons.forEach(function (button) {
         button.addEventListener('click', function () {
             const value = button.dataset.num;
-            
+
             screen.value += value;
         });
     });
 
     equal.addEventListener('click', function () {
-        if(screen.value === ''){
+        if (screen.value === '') {
             screen.value = '';
-        }else {
+        } else {
             let answer = eval(screen.value)
 
             let expression = screen.value
 
-            emptyHistory.className = 'hidden'
+            emptyHistory.classList.add('hidden')
 
             let historyItem = document.createElement('div')
 
             historyItem.className = 'rounded-md bg-gray-100 py-3 px-6 my-2'
 
-            historyItem.innerHTML = 
-            `
+            historyItem.innerHTML =
+                `
                 <p class="text-sm text-gray-500">${expression}</p>
                 <p class="text-lg text-gray-800">= ${answer}</p>
             `;
@@ -41,7 +41,7 @@
             historyList.prepend(historyItem);
 
             screen.value = answer
-        }                           
+        }
     })
 
     clear.addEventListener('click', function () {
@@ -53,12 +53,8 @@
     })
 
     clearHistory.addEventListener('click', function () {
-        historyList.innerHTML = `
-            <p id="empty-history" class="text-xl text-center text-gray-500">
-                No history yet
-            </p>
-        `;
-
-        emptyHistory = styles.displaydocument.querySelector('#empty-history');
+        historyList.innerHTML = '';
+        emptyHistory.classList.remove('hidden');
+        historyList.appendChild(emptyHistory);
     });
 })();
