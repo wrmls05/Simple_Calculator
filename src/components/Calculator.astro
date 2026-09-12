@@ -2,124 +2,155 @@
 import "../styles/global.css";
 ---
 
-<main class="flex flex-col justify-center items-center min-h-screen bg-black">
-    <h1 class="text-3xl text-red-400 font-bold">Simple Calculator</h1>
+<main
+    class="flex justify-center items-center min-h-screen bg-linear-to-br from-red-400 via-red-500 to-red-800"
+>
+    <section class="flex flex-col justify-center items-center m-5 rounded-xl">
+        <h1 class="text-3xl text-black font-bold p-4">Simple Calculator</h1>
 
-    <section
-        class="flex flex-col justify-center items-center bg-gray-800 border-white m-5 rounded-xl"
-    >
-        <form class="bg-gray-600 rounded-xl mb-2">
-            <input
-                type="text"
-                id="screen"
-                class="text-black px-3 w-full text-right text-2xl py-13"
-            />
-        </form>
+        <div class="bg-linear-to-t from-gray-600 via-gray-700 to-gray-900 rounded-xl">
+            <form class="bg-black rounded-xl mb-2">
+                <input
+                    type="text"
+                    id="screen"
+                    class="text-white px-3 w-full text-right text-2xl py-13 focus:outline-none"
+                />
+            </form>
 
-        <div class="grid grid-cols-4 gap-3 text-3xl pb-8 pt-2">
-            <button
-                type="button"
-                class="bg-orange-400 text-white w-15 h-15 rounded-md flex items-center justify-center"
-                data-text="input"
-                data-num="*">*</button
-            >
-            <button
-                type="button"
-                class="bg-orange-400 text-white w-15 h-15 rounded-md flex items-center justify-center"
-                data-text="input"
-                data-num="/">/</button
-            >
-            <button
-                type="button"
-                class="bg-orange-400 text-white w-15 h-15 rounded-md flex items-center justify-center"
-                data-text="input"
-                data-num="-">-</button
-            >
-            <button
-                type="button"
-                class="bg-orange-400 text-white w-15 h-15 rounded-md flex items-center justify-center"
-                data-text="input"
-                data-num="+">+</button
-            >
-            <button
-                type="button"
-                class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center"
-                data-text="input"
-                data-num="9">9</button
-            >
-            <button
-                type="button"
-                class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center"
-                data-text="input"
-                data-num="8">8</button
-            >
-            <button
-                type="button"
-                class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center"
-                data-text="input"
-                data-num="7">7</button
-            >
-            <button
-                type="button"
-                class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center"
-                data-text="input"
-                data-num="6">6</button
-            >
-            <button
-                type="button"
-                class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center"
-                data-text="input"
-                data-num="5">5</button
-            >
-            <button
-                type="button"
-                class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center"
-                data-text="input"
-                data-num="4">4</button
-            >
-            <button
-                type="button"
-                class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center"
-                data-text="input"
-                data-num="3">3</button
-            >
-            <button
-                type="button"
-                class="bg-white text-black w-15 h-15 rounded-md"
-                data-text="input"
-                data-num="2">2</button
-            >
-            <button
-                type="button"
-                class="bg-white text-black w-15 h-15 rounded-md"
-                data-text="input"
-                data-num="1">1</button
-            >
-            <button
-                type="button"
-                class="bg-white text-black w-15 h-15 rounded-md"
-                data-text="input"
-                data-num="0">0</button
-            >
-            <button
-                type="button"
-                class="bg-white text-black w-15 h-15 rounded-md"
-                data-text="input"
-                data-num=".">.</button
-            >
-            <button
-                type="button"
-                data-action="equal"
-                class="bg-green-600 text-black w-15 h-15 rounded-md"
-                data-num="=">=</button
-            >
-            <button
-                type="button"
-                data-action="clear"
-                class="bg-blue-600 text-white w-15 h-15 rounded-md"
-                data-num="C">C</button
-            >
+            <div class="justify-items-center">
+                <div class="grid grid-cols-4 gap-3 text-3xl pb-2 pt-2">
+                    <button
+                        type="button"
+                        class="bg-orange-400 text-white w-15 h-15 rounded-md flex items-center justify-center transition hover:scale-115 hover:bg-orange-300"
+                        data-action="input"
+                        data-num="*">*</button
+                    >
+                    <button
+                        type="button"
+                        class="bg-orange-400 text-white w-15 h-15 rounded-md flex items-center justify-center transition hover:scale-115 hover:bg-orange-300"
+                        data-action="input"
+                        data-num="/">/</button
+                    >
+                    <button
+                        type="button"
+                        class="bg-orange-400 text-white w-15 h-15 rounded-md flex items-center justify-center transition hover:scale-115 hover:bg-orange-300"
+                        data-action="input"
+                        data-num="-">-</button
+                    >
+                    <button
+                        type="button"
+                        class="bg-orange-400 text-white w-15 h-15 rounded-md flex items-center justify-center transition hover:scale-115 hover:bg-orange-300"
+                        data-action="input"
+                        data-num="+">+</button
+                    >
+                </div>
+
+                <div class="grid grid-cols-4 gap-3 text-3xl pb-2 pt-2">
+                    <button
+                        type="button"
+                        class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center transition hover:scale-115 hover:bg-gray-300"
+                        data-action="input"
+                        data-num="7">7</button
+                    >
+                    <button
+                        type="button"
+                        class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center transition hover:scale-115 hover:bg-gray-300"
+                        data-action="input"
+                        data-num="8">8</button
+                    >
+                    <button
+                        type="button"
+                        class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center transition hover:scale-115 hover:bg-gray-300"
+                        data-action="input"
+                        data-num="9">9</button
+                    >
+                    <button
+                        type="button"
+                        class="bg-orange-400 text-white w-15 h-15 rounded-md flex items-center justify-center transition hover:scale-115 hover:bg-orange-300"
+                        data-action="input"
+                        data-num="%">%</button
+                    >
+                </div>
+
+                <div class="grid grid-cols-4 gap-3 text-3xl pb-2 pt-2">
+                    <button
+                        type="button"
+                        class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center transition hover:scale-115 hover:bg-gray-300"
+                        data-action="input"
+                        data-num="4">4</button
+                    >
+                    <button
+                        type="button"
+                        class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center transition hover:scale-115 hover:bg-gray-300"
+                        data-action="input"
+                        data-num="5">5</button
+                    >
+                    <button
+                        type="button"
+                        class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center transition hover:scale-115 hover:bg-gray-300"
+                        data-action="input"
+                        data-num="6">6</button
+                    >
+                    <button
+                        type="button"
+                        class="bg-orange-400 text-white w-15 h-15 rounded-md flex items-center justify-center transition hover:scale-115 hover:bg-orange-300"
+                        data-action="delete">Del</button
+                    >
+                </div>
+
+                <div class="grid grid-cols-4 gap-3 text-3xl pb-2 pt-2">
+                    <button
+                        type="button"
+                        class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center transition hover:scale-115 hover:bg-gray-300"
+                        data-action="input"
+                        data-num="1">1</button
+                    >
+                    <button
+                        type="button"
+                        class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center transition hover:scale-115 hover:bg-gray-300"
+                        data-action="input"
+                        data-num="2">2</button
+                    >
+                    <button
+                        type="button"
+                        class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center transition hover:scale-115 hover:bg-gray-300"
+                        data-action="input"
+                        data-num="3">3</button
+                    >
+                    <button
+                        type="button"
+                        data-action="clear"
+                        class="bg-blue-600 text-white w-15 h-15 rounded-md flex items-center justify-center transition hover:scale-115 hover:bg-blue-500"
+                        data-num="C">C</button
+                    >
+                </div>
+
+                <div class="grid grid-cols-4 gap-3 text-3xl pb-2 pt-2">
+                    <button
+                        type="button"
+                        class="col-span-2 bg-white text-black w-33 h-15 rounded-md flex items-center justify-center transition hover:scale-115 hover:bg-gray-300"
+                        data-action="input"
+                        data-num="0">0</button
+                    >
+                    <button
+                        type="button"
+                        class="bg-white text-black w-15 h-15 rounded-md flex items-center justify-center transition hover:scale-115 hover:bg-gray-300"
+                        data-action="input"
+                        data-num=".">.</button
+                    >
+                    <button
+                        type="button"
+                        data-action="equal"
+                        class="bg-green-600 text-black w-15 h-15 rounded-md flex items-center justify-center transition hover:scale-115 hover:bg-green-500"
+                        data-num="=">=</button
+                    >
+                </div>
+            </div>
         </div>
+    </section>
+
+    <section>
+        <h2 class="text-3xl text-black font-bold p-4">History</h2>
     </section>
 </main>
 
